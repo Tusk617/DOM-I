@@ -42,11 +42,27 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // navigation bar edits
+let nav = document.querySelector("nav");
 let navLinks = document.querySelectorAll("a");
 navLinks.forEach(
   (link, i) => (
     navLinks[i].textContent = siteContent["nav"][`nav-item-${i+1}`]
   ))
+  navLinks.forEach(
+    (link, i) => (
+      navLinks[i].style.color = "green"
+    )
+  )
+
+  let steve = document.createElement("a");
+  steve.textContent = "Steve";
+  nav.prepend(steve);
+  steve.style.color = "green";
+
+  let mcqueen = document.createElement("a");
+  mcqueen.textContent = "Mcqueen";
+  nav.append(mcqueen);
+  mcqueen.style.color = "green";
 
 // main header
 
