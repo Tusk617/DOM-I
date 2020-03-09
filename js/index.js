@@ -40,3 +40,67 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// navigation bar edits
+let navLinks = document.querySelectorAll("a");
+navLinks.forEach(
+  (link, i) => (
+    navLinks[i].textContent = siteContent["nav"][`nav-item-${i+1}`]
+  ))
+
+// main header
+
+const title = document.querySelector("h1");
+title.textContent = siteContent["cta"]["h1"]
+
+//button
+
+const buttonStyle = document.querySelector("button");
+buttonStyle.textContent = siteContent["cta"]["button"]
+
+const imgStyle = document.getElementById("cta-img");
+imgStyle.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+// main content
+
+// top content
+let topContentTitles = document.querySelectorAll(".text-content h4");
+topContentTitles[0].textContent = siteContent["main-content"]["features-h4"]
+topContentTitles[1].textContent = siteContent["main-content"]["about-h4"]
+
+let topContentPara = document.querySelectorAll(".text-content p");
+topContentPara[0].textContent = siteContent["main-content"]["features-content"]
+topContentPara[1].textContent = siteContent["main-content"]["about-content"]
+
+// main content image
+
+document.getElementById("middle-img").setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// bottom content
+
+let bottomContentTitle = document.querySelectorAll(".text-content h4");
+bottomContentTitle[2].textContent = siteContent["main-content"]["services-h4"]
+bottomContentTitle[3].textContent = siteContent["main-content"]["product-h4"]
+bottomContentTitle[4].textContent = siteContent["main-content"]["vision-h4"]
+
+let bottomContentPara = document.querySelectorAll(".text-content p");
+bottomContentPara[2].textContent = siteContent["main-content"]["services-content"]
+bottomContentPara[3].textContent = siteContent["main-content"]["product-content"]
+bottomContentPara[4].textContent = siteContent["main-content"]["vision-content"]
+
+
+// contact
+
+let contactTitle = document.querySelector(".contact h4");
+contactTitle.textContent = siteContent["contact"]["contact-h4"]
+
+let contactContent = document.querySelectorAll(".contact p");
+contactContent[0].textContent = siteContent["contact"]["address"]
+contactContent[1].textContent = siteContent["contact"]["phone"]
+contactContent[2].textContent = siteContent["contact"]["email"]
+
+// footer
+
+let footerContent = document.querySelector("footer p");
+footerContent.textContent = siteContent["footer"]["copyright"]
