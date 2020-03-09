@@ -68,11 +68,13 @@ navLinks.forEach(
 
 const title = document.querySelector("h1");
 title.textContent = siteContent["cta"]["h1"]
+title.style.transform = "rotate(105deg)"
 
 //button
 
 const buttonStyle = document.querySelector("button");
 buttonStyle.textContent = siteContent["cta"]["button"]
+buttonStyle.style.width = "95%"
 
 const imgStyle = document.getElementById("cta-img");
 imgStyle.setAttribute('src', siteContent["cta"]["img-src"])
@@ -87,7 +89,9 @@ topContentTitles[1].textContent = siteContent["main-content"]["about-h4"]
 
 let topContentPara = document.querySelectorAll(".text-content p");
 topContentPara[0].textContent = siteContent["main-content"]["features-content"]
+topContentPara[0].style.transform = "rotate(50deg)"
 topContentPara[1].textContent = siteContent["main-content"]["about-content"]
+topContentPara[1].style.color = "hotpink"
 
 // main content image
 
